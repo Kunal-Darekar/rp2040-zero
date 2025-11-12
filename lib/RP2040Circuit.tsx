@@ -1,9 +1,11 @@
 import { RP2040 } from "../imports/RP2040"
 
 export const RP2040Circuit = () => (
-  <group pcbPack pcbGap={2}>
+  <group>
     <RP2040
       name="U3"
+      pcbX={0}
+      pcbY={0}
       connections={{
         // Power rails - IOVDD
         IOVDD1: ["C12.pin1", "net.V3_3"],

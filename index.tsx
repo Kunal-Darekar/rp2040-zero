@@ -10,43 +10,22 @@ export default () => (
   <XiaoBoard
     variant="RP2040"
     name="J1"
-    routingDisabled
-    schMaxTraceDistance={5}
     width="21mm"
     height="17.5mm"
-    connections={{
-      SWDIO: "net.SWDIO",
-      SWCLK: "net.SWCLK",
-      RUN: "net.RUN",
-      GND1: "net.GND",
-      GND2: "net.GND",
-      GND3: "net.GND",
-      VIN: "net.V5_5",
-      VBUS: "net.USB_VDD",
-      V3_3: "net.V3_3",
-      A0: "net.GPIO26",
-      A1: "net.GPIO27",
-      A2: "net.GPIO28",
-      A3: "net.GPIO29",
-      SDA: "net.GPIO6",
-      SCL: "net.GPIO7",
-      TX: "net.GPIO0",
-      RX: "net.GPIO1",
-      MOSI: "net.GPIO3",
-      MISO: "net.GPIO4",
-      SCK: "net.GPIO2",
-    }}
+    routingDisabled
+    // NOTE: Connections removed - for this breakout board design, we don't need
+    // XiaoBoard to create traces since components connect directly to RP2040 pins
+    // which then connect to the XiaoBoard pads through the copper traces on the PCB
   >
-    {/* Power routing */}
-    <trace from="net.V5_5" to="net.VSYS" />
-    <trace from="net.USB_VDD" to="net.V3_3" />
-
-    {/* Internal circuits */}
-    <VoltageRegulator />
-    <LedCircuit />
-    <FlashCircuit />
-    <CrystalCircuit />
-    <KeyCircuit />
-    <RP2040Circuit />
+    {/* Wrap all components in a subcircuit with routing disabled to prevent 
+        autorouting of internal traces created by component connections */}
+    <group subcircuit routingDisabled>
+      <VoltageRegulator />
+      <LedCircuit />
+      <FlashCircuit />
+      <CrystalCircuit />
+      <KeyCircuit />
+      <RP2040Circuit />
+    </group>
   </XiaoBoard>
 )

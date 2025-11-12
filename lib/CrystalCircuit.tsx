@@ -1,7 +1,7 @@
 import { ABM8_272_T3 } from "../imports/ABM8_272_T3"
 
 export const CrystalCircuit = () => (
-  <group>
+  <group pcbX={5} pcbY={0}>
     <resistor
       name="R8"
       resistance="1k"

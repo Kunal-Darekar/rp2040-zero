@@ -1,7 +1,7 @@
 import { WS2812B_2020 } from "../imports/WS2812B_2020"
 
 export const LedCircuit = () => (
-  <group>
+  <group pcbX={-5} pcbY={0}>
     <WS2812B_2020
       name="L1"
       connections={{
