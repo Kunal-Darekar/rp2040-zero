@@ -5,6 +5,7 @@ export const KeyCircuit = () => (
     <resistor
       name="R2"
       resistance="1k"
+      footprint="0402"
       connections={{
         pin1: "net.QSPI_SS_N",
       }}
