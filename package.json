@@ -37,8 +37,8 @@
     "esbuild": "^0.27.0",
     "kicad-component-converter": "^0.1.31",
     "poppygl": "^0.0.16",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "rollup": "^4.53.2",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-esbuild": "^6.2.1",
@@ -49,7 +49,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
