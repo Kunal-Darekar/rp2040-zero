@@ -18,7 +18,7 @@
     "@biomejs/biome": "^2.1.4",
     "@tscircuit/core": "^0.0.859",
     "@types/react": "^19.1.9",
-    "tscircuit": "^0.0.614"
+    "tscircuit": "^0.0.896"
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
